@@ -620,7 +620,7 @@ if __name__ == "__main__":
     if torch.cuda.device_count() > 1:
         model = torch.nn.DataParallel(model)
     model.to(device=device)
-
+    print(cfg.batch)
     try:
         train(model=model,
               config=cfg,
