@@ -17,8 +17,7 @@ log
 
 *.jpg
 *.json
-data/outcome
 
+data/
 tool/
-DeepStream
-data/cfg
+DeepStream/
