@@ -1,4 +1,5 @@
 numpy==1.18.2
+torchvision==0.5.0
 torch==1.4.0
 tensorboardX==2.0
 scikit_image==0.16.2
@@ -8,4 +9,5 @@ easydict==1.9
 Pillow==7.1.2
 skimage
 opencv_python
+cython
 pycocotools
