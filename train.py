@@ -294,8 +294,6 @@ def train(model, device, config, epochs=5, batch_size=1, save_cp=True, log_step=
 
     n_train = len(train_dataset)
     n_val = len(val_dataset)
-    print(n_train) #
-    print(config.batch) #
     train_loader = DataLoader(train_dataset, batch_size=config.batch // config.subdivisions, shuffle=True,
                               num_workers=8, pin_memory=True, drop_last=True, collate_fn=collate)
 
@@ -538,7 +536,7 @@ def get_args(**kwargs):
                         help='Load model from a .pth file')
     parser.add_argument('-g', '--gpu', metavar='G', type=str, default='1',
                         help='GPU', dest='gpu')
-    parser.add_argument('-dir', '--data-dir', type=str, default=None,
+    parser.add_argument('-dir', '--data-dir', type=str, default='../BCCD_Dataset/BCCD/JPEGImages',
                         help='dataset dir', dest='dataset_dir')
     parser.add_argument('-pretrained', type=str, default=None, help='pretrained yolov4.conv.137')
     parser.add_argument('-classes', type=int, default=2, help='dataset classes')
